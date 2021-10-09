@@ -1,15 +1,19 @@
 import React from "react";
 import GlobalStyle from "./globalStyles";
-
+import Home from "./pages/HomePage/Home";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { Navbar } from "./components";
 
-const App = () => {
+function App() {
   return (
-    <div>
+    <Router>
       <GlobalStyle />
       <Navbar />
-    </div>
+      <Switch>
+        <Route path="/" exact component={Home} />
+      </Switch>
+    </Router>
   );
-};
+}
 
 export default App;
