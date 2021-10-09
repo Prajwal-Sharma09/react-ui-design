@@ -6,7 +6,7 @@ import Products from "./pages/Products/Products";
 import SignUp from "./pages/SignUp/SignUp";
 
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import { Navbar } from "./components";
+import { Navbar, Footer } from "./components";
 
 function App() {
   return (
@@ -19,6 +19,7 @@ function App() {
         <Route path="/products" component={Products} />
         <Route path="/sign-up" component={SignUp} />
       </Switch>
+      <Footer />
     </Router>
   );
 }
